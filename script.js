@@ -2,10 +2,6 @@ let storage = 0;
 let selectedGames = [];
 let totalStorage = 0;
 
-document.getElementById('storage').addEventListener('change', function() {
-  storage = parseInt(this.value);
-});
-
 document.getElementById('clear').addEventListener('click', function() {
   selectedGames = [];
   totalStorage = 0;
@@ -45,3 +41,26 @@ document.querySelectorAll('.game button').forEach(function(button) {
     }
   });
 });
+
+// Update selected games list
+function updateSelectedGames() {
+  const selectedGamesList = document.getElementById('selected-games-list');
+  selectedGamesList.innerHTML = '';
+  selectedGames.forEach((game) => {
+    const li = document.createElement('li');
+    li.textContent = `Game ${game.id} (${game.size} MB`;
+    selectedGamesList.appendChild(li);
+  })
+}
+
+function changeStorageTo500gb() {
+  storage = 500;
+  document.getElementById("500gb").style.backgroundColor = "green";
+  document.getElementById("1tb").style.backgroundColor = "grey";
+}
+
+function changeStorageTo1tb() {
+  storage = 1000;
+  document.getElementById("500gb").style.backgroundColor = "grey";
+  document.getElementById("1tb").style.backgroundColor = "green";
+}

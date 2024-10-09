@@ -3,6 +3,9 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -28,29 +31,47 @@ body {
   background-color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.custom_select select{
-  display: none;
+.user_storage button {
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 20px;
+  color: white;
+  font-size: 20px;
+  border-style: none;
 }
 
-.select-selected {
-  background-color: DodgerBlue;
+.user_control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+.user_control button {
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 20px;
+  color: white;
+  font-size: 20px;
+  border-style: none;
 }
 
+#clear {
+  background-color:#f44336;
+}
+
+#track {
+  background-color: dodgerblue;
+}
+
+#confirm {
+  background-color: #4CAF50;
+}
 
 .games {
   background-color: #fff;
@@ -101,6 +122,8 @@ body {
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  margin-top: auto;
+  font-family: zrnic;
 }
 
 .alert {

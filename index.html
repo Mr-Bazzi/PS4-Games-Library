@@ -1,59 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Bazzi Station</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS4 Games Library</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
-<div class="header">
-  <h1>Bazzi Station</h1>
-</div>
-<div class="options">
-  <div class="user_storage">
-    <h2>Choose your storage option:</h2>
-    <div class="custom-select" style="width: 200px;">
-      <select id="storage">
-        <option value="500">500 GB</option>
-        <option value="1000">1 TB</option>
-      </select>
+  <div class="header">
+    <h1>Bazzi Station</h1>
+  </div>
+  <div class="options">
+    <div class="user_storage">
+      <button id="500gb" onclick="changeStorageTo500gb()">500 GB</button>
+      <button id="1tb" onclick="changeStorageTo1tb()">1 TB</button>
+      <!-- <div class="custom-select" style="width: 200px;">
+        <select id="storage">
+          <option value="500">500 GB</option>
+          <option value="1000">1 TB</option>
+        </select>
+      </div> -->
+    </div>
+    <div class="user_control">
+      <button id="clear">Reset</button>
+      <button id="track">Track Space</button>
+      <button id="confirm">Confirm Games</button>
     </div>
   </div>
-  <button id="clear">Clear</button>
-  <button id="track">Track Space</button>
-  <button id="confirm">Confirm</button>
-</div>
-<div class="games">
-  <div class="game">
-    <img src="game1.jpg" alt="Game 1">
-    <div class="info">
-      <p>Game 1</p>
-      <p>Storage: 50 GB</p>
-      <button class="select">Select</button>
+  <div class="games">
+    <div class="game">
+      <img src="game1.jpg" alt="Game 1">
+      <div class="info">
+        <p>Game 1</p>
+        <p>Storage: 50 GB</p>
+        <button class="select">Select</button>
+      </div>
+    </div>
+    <div class="game">
+      <img src="game2.jpg" alt="Game 2">
+      <div class="info">
+        <p>Game 2</p>
+        <p>Storage: 100 GB</p>
+        <button class="select">Select</button>
+      </div>
+    </div>
+    <div class="game">
+      <img src="game3.jpg" alt="Game 3">
+      <div class="info">
+        <p>Game 3</p>
+        <p>Storage: 200 GB</p>
+        <button class="select">Select</button>
+      </div>
     </div>
   </div>
-  <div class="game">
-    <img src="game2.jpg" alt="Game 2">
-    <div class="info">
-      <p>Game 2</p>
-      <p>Storage: 100 GB</p>
-      <button class="select">Select</button>
-    </div>
+  <div class="footer">
+    <h1>Bazzi Station</h1>
   </div>
-  <div class="game">
-    <img src="game3.jpg" alt="Game 3">
-    <div class="info">
-      <p>Game 3</p>
-      <p>Storage: 200 GB</p>
-      <button class="select">Select</button>
-    </div>
+  <div class="alert">
+    <p>You are out of storage!</p>
   </div>
-</div>
-<div class="footer">
-  <h1>Bazzi Station</h1>
-</div>
-<div class="alert">
-  <p>You are out of storage!</p>
-</div>
-<script src="script.js"></script>
-</body>
+  <script src="script.js"></script>
+  </body>
 </html>
