@@ -34,15 +34,6 @@ body {
   justify-content: center;
 }
 
-.user_storage button {
-  width: 200px;
-  height: 50px;
-  border-radius: 25px;
-  margin: 20px;
-  font-size: 20px;
-  border-style: none;
-}
-
 .user_control {
   display: flex;
   flex-direction: row;
