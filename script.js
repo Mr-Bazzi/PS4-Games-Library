@@ -1,4 +1,4 @@
-let storage = 0;
+let storage = 500;
 let selectedGames = [];
 let totalStorage = 0;
 
@@ -55,12 +55,12 @@ function updateSelectedGames() {
 
 function changeStorageTo500gb() {
   storage = 500;
-  document.getElementById("500gb").style.backgroundColor = "green";
-  document.getElementById("1tb").style.backgroundColor = "grey";
+  document.getElementById("500gb").style.backgroundColor = "#c2fbd7";
+  document.getElementById("1tb").style.backgroundColor = "white";
 }
 
 function changeStorageTo1tb() {
   storage = 1000;
-  document.getElementById("500gb").style.backgroundColor = "grey";
-  document.getElementById("1tb").style.backgroundColor = "green";
+  document.getElementById("500gb").style.backgroundColor = "white";
+  document.getElementById("1tb").style.backgroundColor = "#c2fbd7";
 }
