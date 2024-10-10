@@ -36,16 +36,16 @@ body {
 
 .user_control {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.user_control button {
-  width: 200px;
-  height: 50px;
+#clear {
+  margin: 5px;
+  width: 450px;
+  height: 40px;
   border-radius: 25px;
-  margin: 20px;
   color: white;
   font-size: 16px;
   border-style: none;
@@ -57,9 +57,6 @@ body {
   cursor: pointer;
   display: inline-block;
   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-}
-
-#clear {
   color: red;
   box-shadow: rgba(244,67,54, .2) 0 -25px 18px -14px inset,rgba(244,67,54, .15) 0 1px 2px,rgba(244,67,54, .15) 0 2px 4px,rgba(244,67,54, .15) 0 4px 8px,rgba(244,67,54, .15) 0 8px 16px,rgba(244,67,54, .15) 0 16px 32px;
 }
@@ -70,6 +67,21 @@ body {
 }
 
 #track {
+  margin: 5px;
+  width: 200px;
+  height: 40px;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  border-style: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: all 250ms;
+  background-color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
   color: blue;
   background-color: white;
   box-shadow: rgba(30,144,255, .2) 0 -25px 18px -14px inset,rgba(30,144,255, .15) 0 1px 2px,rgba(30,144,255, .15) 0 2px 4px,rgba(30,144,255, .15) 0 4px 8px,rgba(30,144,255, .15) 0 8px 16px,rgba(30,144,255, .15) 0 16px 32px;
@@ -82,6 +94,21 @@ body {
 }
 
 #confirm {
+  margin: 5px;
+  width: 450px;
+  height: 40px;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  border-style: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: all 250ms;
+  background-color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
   color: green;
   box-shadow: rgba(76,175,80, .2) 0 -25px 18px -14px inset,rgba(76,175,80, .15) 0 1px 2px,rgba(76,175,80, .15) 0 2px 4px,rgba(76,175,80, .15) 0 4px 8px,rgba(76,175,80, .15) 0 8px 16px,rgba(76,175,80, .15) 0 16px 32px;
   background-color: white;
