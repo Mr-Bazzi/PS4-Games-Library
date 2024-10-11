@@ -2,6 +2,8 @@ let storage = 500;
 let selectedGames = [];
 let totalStorage = 0;
 
+document.getElementById('spaceLeft').innerHTML = storage -totalStorage;
+
 document.getElementById('clear').addEventListener('click', function() {
   selectedGames = [];
   totalStorage = 0;
@@ -9,6 +11,7 @@ document.getElementById('clear').addEventListener('click', function() {
     button.textContent = 'Select';
     button.classList.remove('remove');
   });
+  document.getElementById('spaceLeft').innerHTML = storage - totalStorage;
 });
 
 document.getElementById('track').addEventListener('click', function() {
@@ -27,7 +30,7 @@ document.querySelectorAll('.game button').forEach(function(button) {
   button.addEventListener('click', function() {
     let game = button.parentNode.parentNode;
     let storageInfo = game.querySelector('.info p:nth-child(2)').textContent;
-    let storageValue = parseInt(storageInfo.split(' ')[1]);
+    let storageValue = parseFloat(storageInfo.split(' ')[1]);
     if (button.textContent === 'Select') {
       selectedGames.push(game);
       totalStorage += storageValue;
@@ -39,6 +42,7 @@ document.querySelectorAll('.game button').forEach(function(button) {
       button.textContent = 'Select';
       button.classList.remove('remove');
     }
+    document.getElementById('spaceLeft').innerHTML = storage - totalStorage;
   });
 });
 
@@ -57,10 +61,12 @@ function changeStorageTo500gb() {
   storage = 500;
   document.getElementById("500gb").style.backgroundColor = "#c2fbd7";
   document.getElementById("1tb").style.backgroundColor = "white";
+  document.getElementById('spaceLeft').innerHTML = storage - totalStorage;
 }
 
 function changeStorageTo1tb() {
   storage = 1000;
   document.getElementById("500gb").style.backgroundColor = "white";
   document.getElementById("1tb").style.backgroundColor = "#c2fbd7";
+  document.getElementById('spaceLeft').innerHTML = storage - totalStorage;
 }

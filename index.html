@@ -16,8 +16,8 @@
       <button id="1tb" onclick="changeStorageTo1tb()" role="button" class="button-32">1 TB</button>
     </div>
     <div class="user_control">
+      <button id="track"><span id="spaceLeft"></span> Space Left</button>
       <button id="clear">Reset</button>
-      <!-- <button id="track">Track Space</button> -->
       <button id="confirm">Confirm Games</button>
     </div>
   </div>
@@ -25,31 +25,31 @@
     <div class="game">
       <img src="game1.jpg" alt="Game 1">
       <div class="info">
-        <p>Game 1</p>
-        <p>Storage: 50 GB</p>
+        <p>A Way Out</p>
+        <p>Storage: 17.62 GB</p>
         <button class="select">Select</button>
       </div>
     </div>
     <div class="game">
       <img src="game2.jpg" alt="Game 2">
       <div class="info">
-        <p>Game 2</p>
-        <p>Storage: 100 GB</p>
-        <button class="select">Select</button>
+        <p>Assassin's Creed Mirage</p>
+        <p>Storage: 80.52 GB</p>
+        <button class="select" onclick="buttonSelect()">Select</button>
       </div>
     </div>
     <div class="game">
       <img src="game3.jpg" alt="Game 3">
       <div class="info">
-        <p>Game 3</p>
-        <p>Storage: 200 GB</p>
+        <p>Assassin's Creed Odyssey</p>
+        <p>Storage: 191.32 GB</p>
         <button class="select">Select</button>
       </div>
     </div>
     <div class="game">
       <img src="game4.jpg" alt="Game 4">
       <div class="info">
-        <p>Game 4</p>
+        <p>Assassin's Creed Origins</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -57,7 +57,7 @@
     <div class="game">
       <img src="game5.jpg" alt="Game 5">
       <div class="info">
-        <p>Game 5</p>
+        <p>Beyond Two Souls</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -65,7 +65,7 @@
     <div class="game">
       <img src="game6.jpg" alt="Game 6">
       <div class="info">
-        <p>Game 6</p>
+        <p>Call of Duty: Cold War</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -73,7 +73,7 @@
     <div class="game">
       <img src="game7.jpg" alt="Game 7">
       <div class="info">
-        <p>Game 7</p>
+        <p>Call of Duty: Vanguard</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -81,7 +81,7 @@
     <div class="game">
       <img src="game8.jpg" alt="Game 8">
       <div class="info">
-        <p>Game 8</p>
+        <p>Crash Insane Triology</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -89,7 +89,7 @@
     <div class="game">
       <img src="game9.jpg" alt="Game 9">
       <div class="info">
-        <p>Game 9</p>
+        <p>Detroit Become Human</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -97,7 +97,7 @@
     <div class="game">
       <img src="game10.jpg" alt="Game 10">
       <div class="info">
-        <p>Game 10</p>
+        <p>Far Cry 6</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -105,7 +105,7 @@
     <div class="game">
       <img src="game11.jpg" alt="Game 11">
       <div class="info">
-        <p>Game 11</p>
+        <p>EA Sports FC24</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -113,7 +113,7 @@
     <div class="game">
       <img src="game12.jpg" alt="Game 12">
       <div class="info">
-        <p>Game 12</p>
+        <p>EA Sports FC25</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -121,7 +121,7 @@
     <div class="game">
       <img src="game13.jpg" alt="Game 13">
       <div class="info">
-        <p>Game 13</p>
+        <p>FIFA 22</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -129,7 +129,7 @@
     <div class="game">
       <img src="game14.jpg" alt="Game 14">
       <div class="info">
-        <p>Game 14</p>
+        <p>Five Nights at Freddy's Security Breach</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -137,7 +137,7 @@
     <div class="game">
       <img src="game15.jpg" alt="Game 15">
       <div class="info">
-        <p>Game 15</p>
+        <p>God of war</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -145,7 +145,7 @@
     <div class="game">
       <img src="game16.jpg" alt="Game 16">
       <div class="info">
-        <p>Game 16</p>
+        <p>GTA V</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -153,7 +153,7 @@
     <div class="game">
       <img src="game17.jpg" alt="Game 17">
       <div class="info">
-        <p>Game 17</p>
+        <p>Horizon Zero Dawn</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -161,7 +161,7 @@
     <div class="game">
       <img src="game18.jpg" alt="Game 18">
       <div class="info">
-        <p>Game 18</p>
+        <p>Little Nightmares II</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -169,7 +169,7 @@
     <div class="game">
       <img src="game19.jpg" alt="Game 19">
       <div class="info">
-        <p>Game 19</p>
+        <p>Mortal Kombat II</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -177,7 +177,7 @@
     <div class="game">
       <img src="game20.jpg" alt="Game 20">
       <div class="info">
-        <p>Game 20</p>
+        <p>NBA 2K24</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -185,7 +185,7 @@
     <div class="game">
       <img src="game21.jpg" alt="Game 21">
       <div class="info">
-        <p>Game 21</p>
+        <p>NFS Heat</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -193,7 +193,7 @@
     <div class="game">
       <img src="game22.jpg" alt="Game 22">
       <div class="info">
-        <p>Game 22</p>
+        <p>Ratchet & Clank</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -201,7 +201,7 @@
     <div class="game">
       <img src="game23.jpg" alt="Game 23">
       <div class="info">
-        <p>Game 23</p>
+        <p>Red Dead Redemption 2</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -209,7 +209,7 @@
     <div class="game">
       <img src="game24.jpg" alt="Game 24">
       <div class="info">
-        <p>Game 24</p>
+        <p>Resident Evil 4</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -217,7 +217,7 @@
     <div class="game">
       <img src="game25.jpg" alt="Game 25">
       <div class="info">
-        <p>Game 25</p>
+        <p>Resident Evil Village</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -225,7 +225,7 @@
     <div class="game">
       <img src="game26.jpg" alt="Game 26">
       <div class="info">
-        <p>Game 26</p>
+        <p>Spider-Man: Miles Morales</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -233,7 +233,7 @@
     <div class="game">
       <img src="game27.jpg" alt="Game 27">
       <div class="info">
-        <p>Game 27</p>
+        <p>The Last of Us</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -241,7 +241,7 @@
     <div class="game">
       <img src="game28.jpg" alt="Game 28">
       <div class="info">
-        <p>Game 28</p>
+        <p>The Witcher</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -249,7 +249,7 @@
     <div class="game">
       <img src="game29.jpg" alt="Game 29">
       <div class="info">
-        <p>Game 29</p>
+        <p>Watch Dogs Legion</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
@@ -257,15 +257,7 @@
     <div class="game">
       <img src="game30.jpg" alt="Game 30">
       <div class="info">
-        <p>Game 30</p>
-        <p>Storage: 200 GB</p>
-        <button class="select">Select</button>
-      </div>
-    </div>
-    <div class="game">
-      <img src="game32.jpg" alt="Game 32">
-      <div class="info">
-        <p>Game 32</p>
+        <p>WWE 2k18</p>
         <p>Storage: 200 GB</p>
         <button class="select">Select</button>
       </div>
