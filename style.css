@@ -52,11 +52,11 @@ body {
   user-select: none;
   -webkit-user-select: none;
   transition: all 250ms;
-  background-color: white;
+  background-color: rgb(255, 47, 47);
   cursor: pointer;
   display: inline-block;
   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  color: red;
+  color: white;
   box-shadow: rgba(244,67,54, .2) 0 -25px 18px -14px inset,rgba(244,67,54, .15) 0 1px 2px,rgba(244,67,54, .15) 0 2px 4px,rgba(244,67,54, .15) 0 4px 8px,rgba(244,67,54, .15) 0 8px 16px,rgba(244,67,54, .15) 0 16px 32px;
 }
 
@@ -79,38 +79,14 @@ body {
   transition: all 250ms;
   cursor: pointer;
   display: inline-block;
-  color: blue;
-  background-color: white;
+  color: white;
+  background-color: rgb(0, 112, 209);
   box-shadow: rgba(30,144,255, .2) 0 -25px 18px -14px inset,rgba(30,144,255, .15) 0 1px 2px,rgba(30,144,255, .15) 0 2px 4px,rgba(30,144,255, .15) 0 4px 8px,rgba(30,144,255, .15) 0 8px 16px,rgba(30,144,255, .15) 0 16px 32px;
 
 }
 
 #track:hover {
   box-shadow: rgba(30,144,255,.35) 0 -25px 18px -14px inset,rgba(30,144,255,.25) 0 1px 2px,rgba(30,144,255,.25) 0 2px 4px,rgba(30,144,255,.25) 0 4px 8px,rgba(30,144,255,.25) 0 8px 16px,rgba(30,144,255,.25) 0 16px 32px;
-  transform: scale(1.05);
-}
-
-#confirm {
-  margin: 5px;
-  width: 450px;
-  height: 40px;
-  border-radius: 25px;
-  font-size: 16px;
-  border-style: none;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  transition: all 250ms;
-  cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  color: green;
-  box-shadow: rgba(76,175,80, .2) 0 -25px 18px -14px inset,rgba(76,175,80, .15) 0 1px 2px,rgba(76,175,80, .15) 0 2px 4px,rgba(76,175,80, .15) 0 4px 8px,rgba(76,175,80, .15) 0 8px 16px,rgba(76,175,80, .15) 0 16px 32px;
-  background-color: white;
-}
-
-#confirm:hover {
-  box-shadow: rgba(76,175,80,.35) 0 -25px 18px -14px inset,rgba(76,175,80,.25) 0 1px 2px,rgba(76,175,80,.25) 0 2px 4px,rgba(76,175,80,.25) 0 4px 8px,rgba(76,175,80,.25) 0 8px 16px,rgba(76,175,80,.25) 0 16px 32px;
   transform: scale(1.05);
 }
 
@@ -140,13 +116,6 @@ body {
 .info p {
   margin: 10px;
 }
-
-/* .game .info {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  width: 100%;
-} */
 
 .game button {
   background-color: #4CAF50;
@@ -249,4 +218,52 @@ body {
     width: 90%;
   }
 
+
+  .game {
+    width: 120px;
+    height: 250px;
+    font-size: 10px;
+  }
+
+  .game img {
+    width: 100%;
+    height: 150px;
+  }
 }
+
+
+/* styling the WhatsApp button */
+#sendWhatsApp {
+  margin: 5px;
+  width: 450px;
+  height: 40px;
+  border-radius: 25px;
+  font-size: 16px;
+  border-style: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: all 250ms;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  color: white;
+  background-color: #25D366; /* WhatsApp green */
+  box-shadow: rgba(37, 211, 102, .2) 0 -25px 18px -14px inset, rgba(37, 211, 102, .15) 0 1px 2px, rgba(37, 211, 102, .15) 0 2px 4px, rgba(37, 211, 102, .15) 0 4px 8px, rgba(37, 211, 102, .15) 0 8px 16px, rgba(37, 211, 102, .15) 0 16px 32px;
+}
+
+#sendWhatsApp:hover {
+  box-shadow: rgba(37, 211, 102, .35) 0 -25px 18px -14px inset, rgba(37, 211, 102, .25) 0 1px 2px, rgba(37, 211, 102, .25) 0 2px 4px, rgba(37, 211, 102, .25) 0 4px 8px, rgba(37, 211, 102, .25) 0 8px 16px, rgba(37, 211, 102, .25) 0 16px 32px;
+  transform: scale(1.05);
+}
+/* End of styling the WhatsApp button */
+
+/* (start) Adding a pointer when hovering over pictures */
+.game div {
+  cursor: pointer;
+}
+
+.game div:hover {
+  opacity: 0.8;
+}
+/* (end) Adding a pointer when hovering over pictures */
