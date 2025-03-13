@@ -4,16 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PS4 Games Library</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Storage Selection Modal -->
+  <div id="storageModal" class="modal">
+    <div class="modal-content">
+      <h2>Select Your Storage</h2>
+      <p>Please choose the storage capacity you need:</p>
+      <button onclick="selectStorage(500)">500 GB</button>
+      <button onclick="selectStorage(1000)">1 TB</button>
+      <button onclick="selectStorage(2000)">2 TB</button>
+    </div>
+  </div>
+
+
+  <!-- Hamburger Menu -->
+  <div class="hamburger-menu" onclick="toggleSidebar()">☰</div>
+
   <div class="header">
+    <img src="Playstation Logo.png" alt="Logo" class="logo">
     <h1>Bazzi Station</h1>
   </div>
+
+  <!-- Add the GIF here -->
+  <div class="playstation-container">
+    <img src="Website Picture.jpg" alt="website picture">
+  </div>
+
+
+
+  <!-- Sidebar for Selected Games -->
+<div id="sidebar" class="sidebar">
+  <div class="sidebar-header">
+    <h3>Selected Games</h3>
+    <button class="close-sidebar" onclick="toggleSidebar()">×</button>
+  </div>
+  <div id="selected-games-list"></div>
+</div>
+
+
   <div class="options">
     <div class="user_storage">
       <button id="500gb" onclick="changeStorageTo500gb()" role="button" class="button-33">500 GB</button>
       <button id="1tb" onclick="changeStorageTo1tb()" role="button" class="button-32">1 TB</button>
+      <button id="2tb" onclick="changeStorageTo2tb()" role="button" class="button-32">2 TB</button>
     </div>
     <div class="user_control">
       <button id="track"><span id="spaceLeft"></span> Space Left</button>
@@ -28,8 +64,8 @@
       </div>
       <div class="info">
         <p>GTA V</p>
-        <p>Storage: 97.89 GB</p>
-        <button class="select">Select</button>
+        <p>Storage: 98.94 GB</p>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -39,7 +75,7 @@
       <div class="info">
         <p>FC25 (تعليق عربي)</p>
         <p>Storage: 53.34 GB</p>
-        <button class="select" onclick="buttonSelect()">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -49,7 +85,7 @@
       <div class="info">
         <p>Spider-Man Marvel</p>
         <p>Storage: 63.13 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -59,7 +95,7 @@
       <div class="info">
         <p>Minecraft</p>
         <p>Storage: 10.66 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -69,7 +105,7 @@
       <div class="info">
         <p>Crash Bandicoot 4 It's About Time</p>
         <p>Storage: 45.33 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -79,7 +115,17 @@
       <div class="info">
         <p>Sonic SuperStars</p>
         <p>Storage: 10.71 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
+      </div>
+    </div>
+    <div class="game">
+      <div onclick="selectGame(this)">
+        <img src="It Takes Two.jpeg" alt="It Takes Two">
+      </div>
+      <div class="info">
+        <p>It Takes Two</p>
+        <p>Storage: 37.37 GB</p>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -89,7 +135,7 @@
       <div class="info">
         <p>WWE 2K24</p>
         <p>Storage: 92.04 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -99,7 +145,7 @@
       <div class="info">
         <p>NBA 2K24</p>
         <p>Storage: 142.00 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -109,7 +155,7 @@
       <div class="info">
         <p>Red Dead Redemption II</p>
         <p>Storage: 116.30 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -119,7 +165,17 @@
       <div class="info">
         <p>Elden Ring</p>
         <p>Storage: 54.02 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
+      </div>
+    </div>
+    <div class="game">
+      <div onclick="selectGame(this)">
+        <img src="sekiro.jpg" alt="Sekiro">
+      </div>
+      <div class="info">
+        <p>Sekiro: Shadows Die Twice</p>
+        <p>Storage: 17.02 GB</p>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -129,7 +185,7 @@
       <div class="info">
         <p>Spider-Man Miles Morales</p>
         <p>Storage: 54.37 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -139,7 +195,7 @@
       <div class="info">
         <p>Hogwarts Legacy</p>
         <p>Storage: 55.09 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -149,7 +205,7 @@
       <div class="info">
         <p>Need For Speed Heat</p>
         <p>Storage: 36.17 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -159,7 +215,17 @@
       <div class="info">
         <p>Need For Speed Payback</p>
         <p>Storage: 28.16 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
+      </div>
+    </div>
+    <div class="game">
+      <div onclick="selectGame(this)">
+        <img src="Need for Speed Rivals.jpg" alt="Need for Speed Rivals">
+      </div>
+      <div class="info">
+        <p>Need for Speed Rivals</p>
+        <p>Storage: 17.01 GB</p>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -169,7 +235,7 @@
       <div class="info">
         <p>Mortal Kombat 11</p>
         <p>Storage: 69.79 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -179,7 +245,7 @@
       <div class="info">
         <p>Watch Dogs Legion</p>
         <p>Storage: 52.02 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -189,7 +255,7 @@
       <div class="info">
         <p>Uncharted 4: A Thief's End</p>
         <p>Storage: 60.77 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -199,7 +265,7 @@
       <div class="info">
         <p>Uncharted: The Lost Legacy</p>
         <p>Storage: 46.33 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -209,7 +275,7 @@
       <div class="info">
         <p>The Last of Us Remastered</p>
         <p>Storage: 39.12 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -219,7 +285,7 @@
       <div class="info">
         <p>God of War</p>
         <p>Storage: 45.94 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -229,7 +295,7 @@
       <div class="info">
         <p>God of War Ragnarök</p>
         <p>Storage: 111.1 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -239,7 +305,7 @@
       <div class="info">
         <p>Resident Evil 4</p>
         <p>Storage: 34.07 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -249,7 +315,7 @@
       <div class="info">
         <p>Resident Evil 7</p>
         <p>Storage: 25.99 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -259,7 +325,7 @@
       <div class="info">
         <p>Resident Evil Village</p>
         <p>Storage: 30.25 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -269,7 +335,7 @@
       <div class="info">
         <p>FAR CRY 3</p>
         <p>Storage: 8.29 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -279,7 +345,7 @@
       <div class="info">
         <p>Mafia: Definitive Edition</p>
         <p>Storage: 45.89 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -289,7 +355,7 @@
       <div class="info">
         <p>Horizon Zero Dawn</p>
         <p>Storage: 48.47 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -299,7 +365,7 @@
       <div class="info">
         <p>Ghost Recon Wildlands</p>
         <p>Storage: 65.52 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -309,7 +375,7 @@
       <div class="info">
         <p>Star Wars Jedi: Fallen Order</p>
         <p>Storage: 45.79 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -319,7 +385,7 @@
       <div class="info">
         <p>Tomb Raider: Definitive Edition</p>
         <p>Storage: 15.43 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -329,7 +395,7 @@
       <div class="info">
         <p>Rise of The Tomb Raider</p>
         <p>Storage: 16.93 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
     <div class="game">
@@ -339,7 +405,7 @@
       <div class="info">
         <p>Shadow of The Tomb Raider</p>
         <p>Storage: 24.85 GB</p>
-        <button class="select">Select</button>
+        <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
   <div class="game">
@@ -349,7 +415,7 @@
     <div class="info">
       <p>Call of Duty Cold War</p>
       <p>Storage: 200.00 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -359,7 +425,7 @@
     <div class="info">
       <p>Call of Duty Vanguard</p>
       <p>Storage: 128.2 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -369,7 +435,7 @@
     <div class="info">
       <p>Call of Duty Ghost</p>
       <p>Storage: 33.79 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -379,7 +445,7 @@
     <div class="info">
       <p>Call of Duty Modern Warfare II Campaign Remastered</p>
       <p>Storage: 47.15 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -389,7 +455,7 @@
     <div class="info">
       <p>Battlefield 4</p>
       <p>Storage: 39.22 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -399,7 +465,7 @@
     <div class="info">
       <p>Assassin's Creed Mirage</p>
       <p>Storage: 28.50 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -409,7 +475,7 @@
     <div class="info">
       <p>Assassin's Creed Odyssey</p>
       <p>Storage: 80.78 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -418,8 +484,8 @@
     </div>
     <div class="info">
       <p>Assassin's Creed Origins</p>
-      <p>Storage: 53.40 GB</p>
-      <button class="select">Select</button>
+      <p>Storage: 53.41 GB</p>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -429,7 +495,7 @@
     <div class="info">
       <p>FAR CRY 6</p>
       <p>Storage: 103.70 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -439,7 +505,7 @@
     <div class="info">
       <p>The Witcher 3: Wild Hunt</p>
       <p>Storage: 51.98 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -449,7 +515,7 @@
     <div class="info">
       <p>A Way Out</p>
       <p>Storage: 17.50 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -459,7 +525,7 @@
     <div class="info">
       <p>Batman Arkham Knight</p>
       <p>Storage: 49.68 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -469,7 +535,7 @@
     <div class="info">
       <p>Injustice 2</p>
       <p>Storage: 35.34 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -479,7 +545,7 @@
     <div class="info">
       <p>Mortal Kombat XL</p>
       <p>Storage: 44.04 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -489,7 +555,7 @@
     <div class="info">
       <p>Just Cause 4</p>
       <p>Storage: 58.67 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -499,7 +565,7 @@
     <div class="info">
       <p>Resident Evil 6</p>
       <p>Storage: 17.31 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -509,17 +575,7 @@
     <div class="info">
       <p>Crash Insane Triology</p>
       <p>Storage: 24.07 GB</p>
-      <button class="select">Select</button>
-    </div>
-  </div>
-  <div class="game">
-    <div onclick="selectGame(this)">
-      <img src="It Takes Two.jpeg" alt="It Takes Two">
-    </div>
-    <div class="info">
-      <p>It Takes Two</p>
-      <p>Storage: 37.37 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -529,7 +585,7 @@
     <div class="info">
       <p>Unravel Two</p>
       <p>Storage: 3.76 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -539,7 +595,7 @@
     <div class="info">
       <p>Hello Neighbor</p>
       <p>Storage: 2.20 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -549,7 +605,7 @@
     <div class="info">
       <p>Ratchet & Clank</p>
       <p>Storage: 25.65 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -559,7 +615,7 @@
     <div class="info">
       <p>Rayman Legends</p>
       <p>Storage: 9.04 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -569,7 +625,7 @@
     <div class="info">
       <p>Little Nightmares 1</p>
       <p>Storage: 4.11 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -579,7 +635,7 @@
     <div class="info">
       <p>Little Nightmares 2</p>
       <p>Storage: 7.67 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -589,7 +645,7 @@
     <div class="info">
       <p>FC24 (English Subtitles)</p>
       <p>Storage: 52.68 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -599,7 +655,7 @@
     <div class="info">
       <p>FIFA 22 (Arabic Subtitles)</p>
       <p>Storage: 50.00 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -609,7 +665,7 @@
     <div class="info">
       <p>Detroit: Become Human</p>
       <p>Storage: 43.48 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -619,7 +675,7 @@
     <div class="info">
       <p>WWE 2K18</p>
       <p>Storage: 54.42 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -629,7 +685,7 @@
     <div class="info">
       <p>Neighbors back From Hell</p>
       <p>Storage: 2.00 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
   <div class="game">
@@ -639,7 +695,7 @@
     <div class="info">
       <p>Bully</p>
       <p>Storage: 2.89 GB</p>
-      <button class="select">Select</button>
+      <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
 </div>
