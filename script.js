@@ -136,10 +136,16 @@ document.getElementById('sendWhatsApp').addEventListener('click', function() {
   }
 
   let message = "Selected Games for PS4:\n";
-  selectedGames.forEach((game, index) => {
+  let gameInfoArray = selectedGames.map((game) => {
     let gameName = game.querySelector('.info p:nth-child(1)').textContent;
     let gameSize = game.querySelector('.info p:nth-child(2)').textContent;
-    message += `${index + 1}. ${gameName} (${gameSize})\n`;
+    return { name: gameName, size: gameSize };
+  });
+  
+  gameInfoArray.sort((a, b) => a.name.localeCompare(b.name));
+  
+  gameInfoArray.forEach((game, index) => {
+    message += `${index + 1}. ${game.name} (${game.size})\n`;
   });
 
   message += `\nTotal Storage Used: ${totalStorage.toFixed(2)} GB\n`;
